@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>globalpayments.api.services.recurring_service</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="globalpayments-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GlobalPayments.Api</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="globalpayments-module.html">Package&nbsp;globalpayments</a> ::
+        <a href="globalpayments.api-module.html">Package&nbsp;api</a> ::
+        <a href="globalpayments.api.services-module.html">Package&nbsp;services</a> ::
+        Module&nbsp;recurring_service
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="globalpayments.api.services.recurring_service-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="globalpayments.api.services.recurring_service-module.html">Module globalpayments.api.services.recurring_service</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Package globalpayments=globalpayments-module.html"><a title="globalpayments" class="py-name" href="#" onclick="return doclink('link-0', 'globalpayments', 'link-0');">globalpayments</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">gp</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name"><a title="globalpayments" class="py-name" href="#" onclick="return doclink('link-1', 'globalpayments', 'link-0');">globalpayments</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package globalpayments.api=globalpayments.api-module.html"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-2', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package globalpayments.api.entities=globalpayments.api.entities-module.html"><a title="globalpayments.api.entities" class="py-name" href="#" onclick="return doclink('link-3', 'entities', 'link-3');">entities</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module globalpayments.api.entities.enums=globalpayments.api.entities.enums-module.html"><a title="globalpayments.api.entities.enums" class="py-name" href="#" onclick="return doclink('link-4', 'enums', 'link-4');">enums</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Class globalpayments.api.entities.enums.TransactionType=globalpayments.api.entities.enums.TransactionType-class.html"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-5', 'TransactionType', 'link-5');">TransactionType</a></tt> </tt>
+<a name="RecurringService"></a><div id="RecurringService-def"><a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt> <a class="py-toggle" href="#" id="RecurringService-toggle" onclick="return toggle('RecurringService');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="globalpayments.api.services.recurring_service.RecurringService-class.html">RecurringService</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecurringService-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="RecurringService-expanded"><a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="RecurringService.create"></a><div id="RecurringService.create-def"><a name="L7"></a><tt class="py-lineno"> 7</tt> <a class="py-toggle" href="#" id="RecurringService.create-toggle" onclick="return toggle('RecurringService.create');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.services.recurring_service.RecurringService-class.html#create">create</a><tt class="py-op">(</tt><tt class="py-param">entity</tt><tt class="py-op">,</tt> <tt class="py-param">config_name</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecurringService.create-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RecurringService.create-expanded"><a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-6', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Package globalpayments.api.builders=globalpayments.api.builders-module.html"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-7', 'builders', 'link-7');">builders</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Class globalpayments.api.builders.RecurringBuilder=globalpayments.api.builders.RecurringBuilder-class.html"><a title="globalpayments.api.builders.RecurringBuilder" class="py-name" href="#" onclick="return doclink('link-8', 'RecurringBuilder', 'link-8');">RecurringBuilder</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-9', 'TransactionType', 'link-5');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable globalpayments.api.entities.enums.AliasAction.Create=globalpayments.api.entities.enums.AliasAction-class.html#Create,Variable globalpayments.api.entities.enums.TransactionType.Create=globalpayments.api.entities.enums.TransactionType-class.html#Create"><a title="globalpayments.api.entities.enums.AliasAction.Create
+globalpayments.api.entities.enums.TransactionType.Create" class="py-name" href="#" onclick="return doclink('link-10', 'Create', 'link-10');">Create</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">                                                <tt id="link-11" class="py-name" targets="Variable globalpayments.api.builders.RecurringBuilder.entity=globalpayments.api.builders.RecurringBuilder-class.html#entity"><a title="globalpayments.api.builders.RecurringBuilder.entity" class="py-name" href="#" onclick="return doclink('link-11', 'entity', 'link-11');">entity</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method globalpayments.api.builders.AuthorizationBuilder.execute()=globalpayments.api.builders.AuthorizationBuilder-class.html#execute,Method globalpayments.api.builders.BaseBuilder.execute()=globalpayments.api.builders.BaseBuilder-class.html#execute,Method globalpayments.api.builders.ManagementBuilder.execute()=globalpayments.api.builders.ManagementBuilder-class.html#execute,Method globalpayments.api.builders.RecurringBuilder.execute()=globalpayments.api.builders.RecurringBuilder-class.html#execute,Method globalpayments.api.builders.ReportBuilder.execute()=globalpayments.api.builders.ReportBuilder-class.html#execute,Method globalpayments.api.builders.management_builder.ManagementBuilder.execute()=globalpayments.api.builders.management_builder.ManagementBuilder-class.html#execute"><a title="globalpayments.api.builders.AuthorizationBuilder.execute
+globalpayments.api.builders.BaseBuilder.execute
+globalpayments.api.builders.ManagementBuilder.execute
+globalpayments.api.builders.RecurringBuilder.execute
+globalpayments.api.builders.ReportBuilder.execute
+globalpayments.api.builders.management_builder.ManagementBuilder.execute" class="py-name" href="#" onclick="return doclink('link-12', 'execute', 'link-12');">execute</a></tt><tt class="py-op">(</tt><tt class="py-name">config_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="RecurringService.delete"></a><div id="RecurringService.delete-def"><a name="L12"></a><tt class="py-lineno">12</tt> <a class="py-toggle" href="#" id="RecurringService.delete-toggle" onclick="return toggle('RecurringService.delete');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.services.recurring_service.RecurringService-class.html#delete">delete</a><tt class="py-op">(</tt><tt class="py-param">entity</tt><tt class="py-op">,</tt> <tt class="py-param">force</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-param">config_name</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecurringService.delete-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RecurringService.delete-expanded"><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-13', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-14', 'builders', 'link-7');">builders</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder" class="py-name" href="#" onclick="return doclink('link-15', 'RecurringBuilder', 'link-8');">RecurringBuilder</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-16', 'TransactionType', 'link-5');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Variable globalpayments.api.entities.enums.AliasAction.Delete=globalpayments.api.entities.enums.AliasAction-class.html#Delete,Variable globalpayments.api.entities.enums.TransactionType.Delete=globalpayments.api.entities.enums.TransactionType-class.html#Delete"><a title="globalpayments.api.entities.enums.AliasAction.Delete
+globalpayments.api.entities.enums.TransactionType.Delete" class="py-name" href="#" onclick="return doclink('link-17', 'Delete', 'link-17');">Delete</a></tt><tt class="py-op">,</tt> <tt id="link-18" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder.entity" class="py-name" href="#" onclick="return doclink('link-18', 'entity', 'link-11');">entity</a></tt><tt class="py-op">)</tt> \ </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">            <tt class="py-op">.</tt><tt class="py-name">with_force</tt><tt class="py-op">(</tt><tt class="py-name">force</tt><tt class="py-op">)</tt> \ </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">            <tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder.execute
+globalpayments.api.builders.BaseBuilder.execute
+globalpayments.api.builders.ManagementBuilder.execute
+globalpayments.api.builders.RecurringBuilder.execute
+globalpayments.api.builders.ReportBuilder.execute
+globalpayments.api.builders.management_builder.ManagementBuilder.execute" class="py-name" href="#" onclick="return doclink('link-19', 'execute', 'link-12');">execute</a></tt><tt class="py-op">(</tt><tt class="py-name">config_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="RecurringService.edit"></a><div id="RecurringService.edit-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="RecurringService.edit-toggle" onclick="return toggle('RecurringService.edit');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.services.recurring_service.RecurringService-class.html#edit">edit</a><tt class="py-op">(</tt><tt class="py-param">entity</tt><tt class="py-op">,</tt> <tt class="py-param">config_name</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecurringService.edit-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RecurringService.edit-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-20', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-21', 'builders', 'link-7');">builders</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder" class="py-name" href="#" onclick="return doclink('link-22', 'RecurringBuilder', 'link-8');">RecurringBuilder</a></tt><tt class="py-op">(</tt><tt id="link-23" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-23', 'TransactionType', 'link-5');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Variable globalpayments.api.entities.enums.TransactionType.Edit=globalpayments.api.entities.enums.TransactionType-class.html#Edit"><a title="globalpayments.api.entities.enums.TransactionType.Edit" class="py-name" href="#" onclick="return doclink('link-24', 'Edit', 'link-24');">Edit</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">                                                <tt id="link-25" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder.entity" class="py-name" href="#" onclick="return doclink('link-25', 'entity', 'link-11');">entity</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder.execute
+globalpayments.api.builders.BaseBuilder.execute
+globalpayments.api.builders.ManagementBuilder.execute
+globalpayments.api.builders.RecurringBuilder.execute
+globalpayments.api.builders.ReportBuilder.execute
+globalpayments.api.builders.management_builder.ManagementBuilder.execute" class="py-name" href="#" onclick="return doclink('link-26', 'execute', 'link-12');">execute</a></tt><tt class="py-op">(</tt><tt class="py-name">config_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="RecurringService.get"></a><div id="RecurringService.get-def"><a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="RecurringService.get-toggle" onclick="return toggle('RecurringService.get');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.services.recurring_service.RecurringService-class.html#get">get</a><tt class="py-op">(</tt><tt class="py-param">key</tt><tt class="py-op">,</tt> <tt class="py-param">config_name</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecurringService.get-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RecurringService.get-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt id="link-27" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder.entity" class="py-name" href="#" onclick="return doclink('link-27', 'entity', 'link-11');">entity</a></tt> <tt class="py-op">=</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-28', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="globalpayments.api.entities" class="py-name" href="#" onclick="return doclink('link-29', 'entities', 'link-3');">entities</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Class globalpayments.api.entities.RecurringEntity=globalpayments.api.entities.RecurringEntity-class.html"><a title="globalpayments.api.entities.RecurringEntity" class="py-name" href="#" onclick="return doclink('link-30', 'RecurringEntity', 'link-30');">RecurringEntity</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt id="link-31" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder.entity" class="py-name" href="#" onclick="return doclink('link-31', 'entity', 'link-11');">entity</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Variable globalpayments.api.builders.RecurringBuilder.key=globalpayments.api.builders.RecurringBuilder-class.html#key,Variable globalpayments.api.entities.RecurringEntity.key=globalpayments.api.entities.RecurringEntity-class.html#key"><a title="globalpayments.api.builders.RecurringBuilder.key
+globalpayments.api.entities.RecurringEntity.key" class="py-name" href="#" onclick="return doclink('link-32', 'key', 'link-32');">key</a></tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder.key
+globalpayments.api.entities.RecurringEntity.key" class="py-name" href="#" onclick="return doclink('link-33', 'key', 'link-32');">key</a></tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-34', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-35', 'builders', 'link-7');">builders</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder" class="py-name" href="#" onclick="return doclink('link-36', 'RecurringBuilder', 'link-8');">RecurringBuilder</a></tt><tt class="py-op">(</tt><tt id="link-37" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-37', 'TransactionType', 'link-5');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Variable globalpayments.api.entities.enums.TransactionType.Fetch=globalpayments.api.entities.enums.TransactionType-class.html#Fetch"><a title="globalpayments.api.entities.enums.TransactionType.Fetch" class="py-name" href="#" onclick="return doclink('link-38', 'Fetch', 'link-38');">Fetch</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">                                                <tt id="link-39" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder.entity" class="py-name" href="#" onclick="return doclink('link-39', 'entity', 'link-11');">entity</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder.execute
+globalpayments.api.builders.BaseBuilder.execute
+globalpayments.api.builders.ManagementBuilder.execute
+globalpayments.api.builders.RecurringBuilder.execute
+globalpayments.api.builders.ReportBuilder.execute
+globalpayments.api.builders.management_builder.ManagementBuilder.execute" class="py-name" href="#" onclick="return doclink('link-40', 'execute', 'link-12');">execute</a></tt><tt class="py-op">(</tt><tt class="py-name">config_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="RecurringService.search"></a><div id="RecurringService.search-def"><a name="L31"></a><tt class="py-lineno">31</tt> <a class="py-toggle" href="#" id="RecurringService.search-toggle" onclick="return toggle('RecurringService.search');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.services.recurring_service.RecurringService-class.html#search">search</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RecurringService.search-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RecurringService.search-expanded"><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-41', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-42', 'builders', 'link-7');">builders</a></tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="globalpayments.api.builders.RecurringBuilder" class="py-name" href="#" onclick="return doclink('link-43', 'RecurringBuilder', 'link-8');">RecurringBuilder</a></tt><tt class="py-op">(</tt><tt id="link-44" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-44', 'TransactionType', 'link-5');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-45" class="py-name" targets="Variable globalpayments.api.entities.enums.ReportType.Search=globalpayments.api.entities.enums.ReportType-class.html#Search,Variable globalpayments.api.entities.enums.TransactionType.Search=globalpayments.api.entities.enums.TransactionType-class.html#Search"><a title="globalpayments.api.entities.enums.ReportType.Search
+globalpayments.api.entities.enums.TransactionType.Search" class="py-name" href="#" onclick="return doclink('link-45', 'Search', 'link-45');">Search</a></tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="globalpayments-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GlobalPayments.Api</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Feb 18 17:30:22 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

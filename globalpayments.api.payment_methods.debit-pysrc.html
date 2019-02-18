@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>globalpayments.api.payment_methods.debit</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="globalpayments-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GlobalPayments.Api</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="globalpayments-module.html">Package&nbsp;globalpayments</a> ::
+        <a href="globalpayments.api-module.html">Package&nbsp;api</a> ::
+        <a href="globalpayments.api.payment_methods-module.html">Package&nbsp;payment_methods</a> ::
+        Module&nbsp;debit
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="globalpayments.api.payment_methods.debit-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="globalpayments.api.payment_methods.debit-module.html" onclick="show_private();">Module globalpayments.api.payment_methods.debit</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">Credit payment method types</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Package globalpayments=globalpayments-module.html"><a title="globalpayments" class="py-name" href="#" onclick="return doclink('link-0', 'globalpayments', 'link-0');">globalpayments</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">gp</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name"><a title="globalpayments" class="py-name" href="#" onclick="return doclink('link-1', 'globalpayments', 'link-0');">globalpayments</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package globalpayments.api=globalpayments.api-module.html"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-2', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package globalpayments.api.entities=globalpayments.api.entities-module.html"><a title="globalpayments.api.entities" class="py-name" href="#" onclick="return doclink('link-3', 'entities', 'link-3');">entities</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module globalpayments.api.entities.enums=globalpayments.api.entities.enums-module.html"><a title="globalpayments.api.entities.enums" class="py-name" href="#" onclick="return doclink('link-4', 'enums', 'link-4');">enums</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">(</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Class globalpayments.api.entities.enums.CvnPresenceIndicator=globalpayments.api.entities.enums.CvnPresenceIndicator-class.html"><a title="globalpayments.api.entities.enums.CvnPresenceIndicator" class="py-name" href="#" onclick="return doclink('link-5', 'CvnPresenceIndicator', 'link-5');">CvnPresenceIndicator</a></tt><tt class="py-op">,</tt> <tt id="link-6" class="py-name" targets="Class globalpayments.api.entities.enums.PaymentMethodType=globalpayments.api.entities.enums.PaymentMethodType-class.html"><a title="globalpayments.api.entities.enums.PaymentMethodType" class="py-name" href="#" onclick="return doclink('link-6', 'PaymentMethodType', 'link-6');">PaymentMethodType</a></tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name" targets="Class globalpayments.api.entities.enums.TransactionType=globalpayments.api.entities.enums.TransactionType-class.html"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-7', 'TransactionType', 'link-7');">TransactionType</a></tt><tt class="py-op">)</tt> </tt>
+<a name="DebitTrackData"></a><div id="DebitTrackData-def"><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt> <a class="py-toggle" href="#" id="DebitTrackData-toggle" onclick="return toggle('DebitTrackData');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="globalpayments.api.payment_methods.debit.DebitTrackData-class.html">DebitTrackData</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DebitTrackData-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="DebitTrackData-expanded"><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Module globalpayments.api.entities.encryption_data=globalpayments.api.entities.encryption_data-module.html,Variable globalpayments.api.payment_methods.credit.Credit.encryption_data=globalpayments.api.payment_methods.credit.Credit-class.html#encryption_data,Variable globalpayments.api.payment_methods.debit.DebitTrackData.encryption_data=globalpayments.api.payment_methods.debit.DebitTrackData-class.html#encryption_data,Variable globalpayments.api.payment_methods.ebt.EBTTrackData.encryption_data=globalpayments.api.payment_methods.ebt.EBTTrackData-class.html#encryption_data,Variable globalpayments.api.payment_methods.payment_interfaces.Encryptable.encryption_data=globalpayments.api.payment_methods.payment_interfaces.Encryptable-class.html#encryption_data"><a title="globalpayments.api.entities.encryption_data
+globalpayments.api.payment_methods.credit.Credit.encryption_data
+globalpayments.api.payment_methods.debit.DebitTrackData.encryption_data
+globalpayments.api.payment_methods.ebt.EBTTrackData.encryption_data
+globalpayments.api.payment_methods.payment_interfaces.Encryptable.encryption_data" class="py-name" href="#" onclick="return doclink('link-8', 'encryption_data', 'link-8');">encryption_data</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">    <tt id="link-9" class="py-name" targets="Variable globalpayments.api.entities.RecurringPaymentMethod.payment_method_type=globalpayments.api.entities.RecurringPaymentMethod-class.html#payment_method_type,Variable globalpayments.api.entities.Transaction.payment_method_type=globalpayments.api.entities.Transaction-class.html#payment_method_type,Variable globalpayments.api.payment_methods.credit.Credit.payment_method_type=globalpayments.api.payment_methods.credit.Credit-class.html#payment_method_type,Variable globalpayments.api.payment_methods.debit.DebitTrackData.payment_method_type=globalpayments.api.payment_methods.debit.DebitTrackData-class.html#payment_method_type,Variable globalpayments.api.payment_methods.ebt.EBT.payment_method_type=globalpayments.api.payment_methods.ebt.EBT-class.html#payment_method_type,Variable globalpayments.api.payment_methods.echeck.ECheck.payment_method_type=globalpayments.api.payment_methods.echeck.ECheck-class.html#payment_method_type,Variable globalpayments.api.payment_methods.giftcard.GiftCard.payment_method_type=globalpayments.api.payment_methods.giftcard.GiftCard-class.html#payment_method_type,Variable globalpayments.api.payment_methods.payment_interfaces.PaymentMethod.payment_method_type=globalpayments.api.payment_methods.payment_interfaces.PaymentMethod-class.html#payment_method_type,Variable globalpayments.api.payment_methods.transaction_reference.TransactionReference.payment_method_type=globalpayments.api.payment_methods.transaction_reference.TransactionReference-class.html#payment_method_type"><a title="globalpayments.api.entities.RecurringPaymentMethod.payment_method_type
+globalpayments.api.entities.Transaction.payment_method_type
+globalpayments.api.payment_methods.credit.Credit.payment_method_type
+globalpayments.api.payment_methods.debit.DebitTrackData.payment_method_type
+globalpayments.api.payment_methods.ebt.EBT.payment_method_type
+globalpayments.api.payment_methods.echeck.ECheck.payment_method_type
+globalpayments.api.payment_methods.giftcard.GiftCard.payment_method_type
+globalpayments.api.payment_methods.payment_interfaces.PaymentMethod.payment_method_type
+globalpayments.api.payment_methods.transaction_reference.TransactionReference.payment_method_type" class="py-name" href="#" onclick="return doclink('link-9', 'payment_method_type', 'link-9');">payment_method_type</a></tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="globalpayments.api.entities.enums.PaymentMethodType" class="py-name" href="#" onclick="return doclink('link-10', 'PaymentMethodType', 'link-6');">PaymentMethodType</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Variable globalpayments.api.entities.enums.PaymentMethodType.Debit=globalpayments.api.entities.enums.PaymentMethodType-class.html#Debit"><a title="globalpayments.api.entities.enums.PaymentMethodType.Debit" class="py-name" href="#" onclick="return doclink('link-11', 'Debit', 'link-11');">Debit</a></tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable globalpayments.api.payment_methods.debit.DebitTrackData.pin_block=globalpayments.api.payment_methods.debit.DebitTrackData-class.html#pin_block,Variable globalpayments.api.payment_methods.ebt.EBT.pin_block=globalpayments.api.payment_methods.ebt.EBT-class.html#pin_block,Variable globalpayments.api.payment_methods.payment_interfaces.PinProtected.pin_block=globalpayments.api.payment_methods.payment_interfaces.PinProtected-class.html#pin_block"><a title="globalpayments.api.payment_methods.debit.DebitTrackData.pin_block
+globalpayments.api.payment_methods.ebt.EBT.pin_block
+globalpayments.api.payment_methods.payment_interfaces.PinProtected.pin_block" class="py-name" href="#" onclick="return doclink('link-12', 'pin_block', 'link-12');">pin_block</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt id="link-13" class="py-name" targets="Variable globalpayments.api.payment_methods.credit.CreditTrackData.value=globalpayments.api.payment_methods.credit.CreditTrackData-class.html#value,Variable globalpayments.api.payment_methods.debit.DebitTrackData.value=globalpayments.api.payment_methods.debit.DebitTrackData-class.html#value,Variable globalpayments.api.payment_methods.ebt.EBTTrackData.value=globalpayments.api.payment_methods.ebt.EBTTrackData-class.html#value,Variable globalpayments.api.payment_methods.giftcard.GiftCard.value=globalpayments.api.payment_methods.giftcard.GiftCard-class.html#value,Variable globalpayments.api.payment_methods.payment_interfaces.TrackData.value=globalpayments.api.payment_methods.payment_interfaces.TrackData-class.html#value"><a title="globalpayments.api.payment_methods.credit.CreditTrackData.value
+globalpayments.api.payment_methods.debit.DebitTrackData.value
+globalpayments.api.payment_methods.ebt.EBTTrackData.value
+globalpayments.api.payment_methods.giftcard.GiftCard.value
+globalpayments.api.payment_methods.payment_interfaces.TrackData.value" class="py-name" href="#" onclick="return doclink('link-13', 'value', 'link-13');">value</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DebitTrackData.is_track_data"></a><div id="DebitTrackData.is_track_data-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="DebitTrackData.is_track_data-toggle" onclick="return toggle('DebitTrackData.is_track_data');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.payment_methods.debit.DebitTrackData-class.html#is_track_data">is_track_data</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DebitTrackData.is_track_data-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="DebitTrackData.is_track_data-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">        Helper method to test if a L{Credit} object is track data.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">            <tt class="py-name">_number_attr</tt> <tt class="py-op">=</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-string">'value'</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt> <tt class="py-name">AttributeError</tt> <tt class="py-keyword">as</tt> <tt class="py-name">_exc</tt><tt class="py-op">:</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="DebitTrackData.add_value"></a><div id="DebitTrackData.add_value-def"><a name="L28"></a><tt class="py-lineno">28</tt> <a class="py-toggle" href="#" id="DebitTrackData.add_value-toggle" onclick="return toggle('DebitTrackData.add_value');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.payment_methods.debit.DebitTrackData-class.html#add_value">add_value</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">amount</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DebitTrackData.add_value-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="DebitTrackData.add_value-expanded"><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">        Adds value to to a payment method.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">        @type amount: number</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-docstring">        @param amount: The amount of the transaction</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: L{AuthorizationBuilder}</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">        @return: The builder</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-14', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Package globalpayments.api.builders=globalpayments.api.builders-module.html"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-15', 'builders', 'link-15');">builders</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Class globalpayments.api.builders.AuthorizationBuilder=globalpayments.api.builders.AuthorizationBuilder-class.html"><a title="globalpayments.api.builders.AuthorizationBuilder" class="py-name" href="#" onclick="return doclink('link-16', 'AuthorizationBuilder', 'link-16');">AuthorizationBuilder</a></tt><tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-17', 'TransactionType', 'link-7');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable globalpayments.api.entities.enums.TransactionType.AddValue=globalpayments.api.entities.enums.TransactionType-class.html#AddValue"><a title="globalpayments.api.entities.enums.TransactionType.AddValue" class="py-name" href="#" onclick="return doclink('link-18', 'AddValue', 'link-18');">AddValue</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt> \ </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">            <tt class="py-op">.</tt><tt class="py-name">with_amount</tt><tt class="py-op">(</tt><tt id="link-19" class="py-name" targets="Variable globalpayments.api.builders.AuthorizationBuilder.amount=globalpayments.api.builders.AuthorizationBuilder-class.html#amount,Variable globalpayments.api.builders.ManagementBuilder.amount=globalpayments.api.builders.ManagementBuilder-class.html#amount,Variable globalpayments.api.entities.Schedule.amount=globalpayments.api.entities.Schedule-class.html#amount,Variable globalpayments.api.entities.transaction_summary.TransactionSummary.amount=globalpayments.api.entities.transaction_summary.TransactionSummary-class.html#amount"><a title="globalpayments.api.builders.AuthorizationBuilder.amount
+globalpayments.api.builders.ManagementBuilder.amount
+globalpayments.api.entities.Schedule.amount
+globalpayments.api.entities.transaction_summary.TransactionSummary.amount" class="py-name" href="#" onclick="return doclink('link-19', 'amount', 'link-19');">amount</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"> </tt>
+<a name="DebitTrackData.charge"></a><div id="DebitTrackData.charge-def"><a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="DebitTrackData.charge-toggle" onclick="return toggle('DebitTrackData.charge');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.payment_methods.debit.DebitTrackData-class.html#charge">charge</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">amount</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DebitTrackData.charge-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="DebitTrackData.charge-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring">        Creates a charge (sale) against the payment method.</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring">        @type amount: number</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">        @param amount: The amount of the transaction</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: L{AuthorizationBuilder}</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"><tt class="py-docstring">        @return: The builder</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt id="link-20" class="py-name" targets="Variable globalpayments.api.builders.AuthorizationBuilder.order_id=globalpayments.api.builders.AuthorizationBuilder-class.html#order_id,Variable globalpayments.api.builders.ManagementBuilder.order_id=globalpayments.api.builders.ManagementBuilder-class.html#order_id,Variable globalpayments.api.builders.RecurringBuilder.order_id=globalpayments.api.builders.RecurringBuilder-class.html#order_id,Variable globalpayments.api.builders.management_builder.ManagementBuilder.order_id=globalpayments.api.builders.management_builder.ManagementBuilder-class.html#order_id,Variable globalpayments.api.entities.Transaction.order_id=globalpayments.api.entities.Transaction-class.html#order_id,Variable globalpayments.api.payment_methods.transaction_reference.TransactionReference.order_id=globalpayments.api.payment_methods.transaction_reference.TransactionReference-class.html#order_id"><a title="globalpayments.api.builders.AuthorizationBuilder.order_id
+globalpayments.api.builders.ManagementBuilder.order_id
+globalpayments.api.builders.RecurringBuilder.order_id
+globalpayments.api.builders.management_builder.ManagementBuilder.order_id
+globalpayments.api.entities.Transaction.order_id
+globalpayments.api.payment_methods.transaction_reference.TransactionReference.order_id" class="py-name" href="#" onclick="return doclink('link-20', 'order_id', 'link-20');">order_id</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-21', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-22', 'builders', 'link-15');">builders</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder" class="py-name" href="#" onclick="return doclink('link-23', 'AuthorizationBuilder', 'link-16');">AuthorizationBuilder</a></tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-24', 'TransactionType', 'link-7');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Variable globalpayments.api.entities.enums.TransactionType.Sale=globalpayments.api.entities.enums.TransactionType-class.html#Sale"><a title="globalpayments.api.entities.enums.TransactionType.Sale" class="py-name" href="#" onclick="return doclink('link-25', 'Sale', 'link-25');">Sale</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt> \ </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">            <tt class="py-op">.</tt><tt class="py-name">with_amount</tt><tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder.amount
+globalpayments.api.builders.ManagementBuilder.amount
+globalpayments.api.entities.Schedule.amount
+globalpayments.api.entities.transaction_summary.TransactionSummary.amount" class="py-name" href="#" onclick="return doclink('link-26', 'amount', 'link-19');">amount</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"> </tt>
+<a name="DebitTrackData.refund"></a><div id="DebitTrackData.refund-def"><a name="L56"></a><tt class="py-lineno">56</tt> <a class="py-toggle" href="#" id="DebitTrackData.refund-toggle" onclick="return toggle('DebitTrackData.refund');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.payment_methods.debit.DebitTrackData-class.html#refund">refund</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">amount</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DebitTrackData.refund-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="DebitTrackData.refund-expanded"><a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt class="py-docstring">        Refunds the payment method.</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt class="py-docstring">        @type amount: number</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-docstring">        @param amount: The amount of the transaction</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: L{AuthorizationBuilder}</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-docstring">        @return: The builder</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-27', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-28', 'builders', 'link-15');">builders</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder" class="py-name" href="#" onclick="return doclink('link-29', 'AuthorizationBuilder', 'link-16');">AuthorizationBuilder</a></tt><tt class="py-op">(</tt><tt id="link-30" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-30', 'TransactionType', 'link-7');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Variable globalpayments.api.entities.enums.TransactionType.Refund=globalpayments.api.entities.enums.TransactionType-class.html#Refund"><a title="globalpayments.api.entities.enums.TransactionType.Refund" class="py-name" href="#" onclick="return doclink('link-31', 'Refund', 'link-31');">Refund</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt> \ </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">            <tt class="py-op">.</tt><tt class="py-name">with_amount</tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder.amount
+globalpayments.api.builders.ManagementBuilder.amount
+globalpayments.api.entities.Schedule.amount
+globalpayments.api.entities.transaction_summary.TransactionSummary.amount" class="py-name" href="#" onclick="return doclink('link-32', 'amount', 'link-19');">amount</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"> </tt>
+<a name="DebitTrackData.reverse"></a><div id="DebitTrackData.reverse-def"><a name="L69"></a><tt class="py-lineno">69</tt> <a class="py-toggle" href="#" id="DebitTrackData.reverse-toggle" onclick="return toggle('DebitTrackData.reverse');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="globalpayments.api.payment_methods.debit.DebitTrackData-class.html#reverse">reverse</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">amount</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DebitTrackData.reverse-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="DebitTrackData.reverse-expanded"><a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt class="py-docstring">        Reverses a previous transaction against the payment method.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt class="py-docstring">        @type amount: number</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"><tt class="py-docstring">        @param amount: The amount of the transaction</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line"><tt class="py-docstring">        @rtype: L{AuthorizationBuilder}</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line"><tt class="py-docstring">        @return: The builder</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">gp</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="globalpayments.api" class="py-name" href="#" onclick="return doclink('link-33', 'api', 'link-2');">api</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="globalpayments.api.builders" class="py-name" href="#" onclick="return doclink('link-34', 'builders', 'link-15');">builders</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder" class="py-name" href="#" onclick="return doclink('link-35', 'AuthorizationBuilder', 'link-16');">AuthorizationBuilder</a></tt><tt class="py-op">(</tt><tt id="link-36" class="py-name"><a title="globalpayments.api.entities.enums.TransactionType" class="py-name" href="#" onclick="return doclink('link-36', 'TransactionType', 'link-7');">TransactionType</a></tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Variable globalpayments.api.entities.enums.TransactionType.Reversal=globalpayments.api.entities.enums.TransactionType-class.html#Reversal"><a title="globalpayments.api.entities.enums.TransactionType.Reversal" class="py-name" href="#" onclick="return doclink('link-37', 'Reversal', 'link-37');">Reversal</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt> \ </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">            <tt class="py-op">.</tt><tt class="py-name">with_amount</tt><tt class="py-op">(</tt><tt id="link-38" class="py-name"><a title="globalpayments.api.builders.AuthorizationBuilder.amount
+globalpayments.api.builders.ManagementBuilder.amount
+globalpayments.api.entities.Schedule.amount
+globalpayments.api.entities.transaction_summary.TransactionSummary.amount" class="py-name" href="#" onclick="return doclink('link-38', 'amount', 'link-19');">amount</a></tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="globalpayments-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GlobalPayments.Api</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Feb 18 17:30:21 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
